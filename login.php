@@ -16,8 +16,11 @@
         <?php include("zaglavlje.php"); ?>
         <div id="log-okvir">
             <div id="registracija">
+                serem ti se u usta
             </div>
             <div id="login">
+            serem ti se u usta
+
             </div>
 
         </div>
