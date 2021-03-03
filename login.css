@@ -1,0 +1,19 @@
+
+#log-okvir{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+#registracija{
+    width: 40%;
+    min-height: 500px;
+    background-color:rgba(250, 235, 215, 0.849) ;
+    border-right: black solid 2px;
+}
+#login{
+    width: 40%;
+    min-height: 500px;
+    background-color:rgba(215, 250, 222, 0.815) ;
+}
