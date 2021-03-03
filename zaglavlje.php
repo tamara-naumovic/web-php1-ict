@@ -3,7 +3,9 @@
         <div id="header-logo">
             <img src="images/logo.png" alt="itachi">
         </div>
-        <div id="header-login">LOGOVANJE</div>
+        <div id="header-login">
+            <a href="login.php">LOGOVANJE</a>
+        </div>
     </div>
 
     <div id="navigacija">

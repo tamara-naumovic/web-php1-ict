@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="okvir">
+    <div class="okvir">
         <?php include("zaglavlje.php");?>
 
         <div id="sadrzaj">
