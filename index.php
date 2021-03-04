@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="still.css" type="text/css">
+    <link rel="stylesheet" href="css/stil.css" type="text/css">
 
 </head>
 
@@ -16,10 +16,10 @@
 
         <div id="sadrzaj">
             <div id="about-me-wrapper">
-                <div id="about-me-logo">
+                <div id="about-me-left">
                     <img src="images/ja.jpg" alt="itachi">
                 </div>
-                <div id="bio">
+                <div id="about-me-right">
                     OVDE IDE TEKST O MENI
                 </div>
             </div>

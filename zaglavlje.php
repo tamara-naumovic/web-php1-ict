@@ -10,11 +10,11 @@
 
     <div id="navigacija">
         <ul>
-            <li class="link"><a href="#">Link 1</a></li>
-            <li class="link"><a href="#">Link 2</a></li>
-            <li class="link"><a href="#">Link 3</a></li>
-            <li class="link"><a href="#">Link 4</a></li>
-            <li class="link"><a href="#">Link 5</a></li>
+            <li class="link"><a href="index.php">Home</a></li>
+            <li class="link"><a href="#">Store</a></li>
+            <li class="link"><a href="#">Contact</a></li>
+            <li class="link"><a href="#">About me</a></li>
+            <li class="link"><a href="#">Cart</a></li>
         </ul>
     </div>
 </div>
