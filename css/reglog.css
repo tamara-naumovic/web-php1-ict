@@ -156,6 +156,10 @@
     margin-bottom: 0;
 }
 
+.cistac{
+    clear: both;
+}
+
 @media (max-width: 420px){
     .forma .form .input_polje{
         flex-direction: column;
@@ -168,10 +172,3 @@
         flex-direction: row;
     }
 }
-
-#login{
-    max-width: 500px;
-    width: 100%;
-    min-height: 500px;
-}
-

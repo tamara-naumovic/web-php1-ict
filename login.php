@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login/Registracija</title>
 
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="stylesheet" href="css/reglog.css" type="text/css">
-    <link rel="stylesheet" href="css/stil.css" type="text/css">
-
-
+    <script src="https://kit.fontawesome.com/d8531d1ca7.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
     <div class="okvir">
-        <?php include("zaglavlje.php"); ?>
-        <div id="log-okvir">
+        <?php include("header.php"); ?>
+            <div id="log-okvir">
             <div class="forma registracija">
                 <div class="title">
                     Registration form
@@ -57,7 +58,7 @@
 
                         <div class="input_polje">
                             <label for="">Email address</label>
-                            <input type="email" class="input"/>
+                            <input type="text" class="input" placeholder="example@mail.com"/>
                         </div>
 
                         <div class="input_polje">
@@ -115,10 +116,8 @@
             </div>
         </div>
         <div class="cistac"></div>
-        <?php include("footer.php")?>
+        <?php include("footer.php"); ?>
     </div>
-
-
 </body>
 
 </html>
