@@ -8,6 +8,7 @@
 }
 
 #log-okvir{
+    padding: 50px;
     display: flex;
     flex-flow: row wrap;
     width: 100%;
@@ -15,6 +16,7 @@
     justify-content: center;
     background-color: #fec107;
 }
+
 
 .forma{
     max-width: 500px;

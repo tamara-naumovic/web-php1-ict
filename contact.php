@@ -13,7 +13,20 @@
 <body>
     <div class="okvir">
         <?php include("header.php"); ?>
-        
+            <h1 class="brand">GamingStore</h1>
+            <div class="wrapper">
+                <div class="company-info">
+                    <h3>GamingStore</h3>
+                    <ul>
+                        <li>Karadjordjeva 55</li>
+                        <li>555 5555 555</li>
+                        <li>test@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="contact">
+
+                </div>
+            </div>
         <div class="cistac"></div>
         <?php include("footer.php"); ?>
     </div>
