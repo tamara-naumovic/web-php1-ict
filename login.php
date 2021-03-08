@@ -25,8 +25,15 @@
                 </div>
                 <form action="" id="formReg" class="form">
                     <div class="form-control">
-                        <label>Username</label>
-                        <input type="text" name="username" id="username" placeholder="Username"/>
+                        <label>First Name</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="First Name"/>
+                        <i class="fas fa-check"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small class="small">Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Last Name</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Last name"/>
                         <i class="fas fa-check"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small class="small">Error message</small>
@@ -68,8 +75,8 @@
                 </div>
                 <form action="" id="formLog" class="form">
                     <div class="form-control">
-                        <label>Username</label>
-                        <input type="text" name="username" id="usernameLog" placeholder="Username"/>
+                        <label>Email</label>
+                        <input type="email" name="emailLog" id="emailLog" placeholder="Email"/>
                         <i class="fas fa-check"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small class="small">Error message</small>

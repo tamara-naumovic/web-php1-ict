@@ -21,20 +21,6 @@
                 </div>
                 <form action="" id="formCnt" class="form">
                     <div class="form-control">
-                        <label>Username</label>
-                        <input type="text" name="username" id="usernameCnt" placeholder="Username"/>
-                        <i class="fas fa-check"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <small class="small">Error message</small>
-                    </div>
-                    <div class="form-control">
-                        <label>Email</label>
-                        <input type="email" name="email" id="emailCnt" placeholder="Email"/>
-                        <i class="fas fa-check"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <small class="small">Error message</small>
-                    </div>
-                    <div class="form-control">
                         <label>Message</label>
                         <textarea name="message" id="textareaCnt" placeholder="Message"></textarea>
                         <i class="fas fa-check"></i>

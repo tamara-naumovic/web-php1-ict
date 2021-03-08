@@ -1,9 +1,10 @@
 
 const formReg = document.getElementById("formReg");
 const formLog = document.getElementById("formLog");
-const usernameLog = document.getElementById("usernameLog");
+const emailLog = document.getElementById("emailLog");
 const passwordLog = document.getElementById("passwordLog");
-const username = document.getElementById("username");
+const firstname = document.getElementById("firstname");
+const lastname = document.getElementById("lastname");
 const email = document.getElementById("email");
 const address = document.getElementById("address");
 const password = document.getElementById("password");
@@ -20,18 +21,27 @@ formReg.addEventListener("submit",(e)=>{
 });
 
 function proveraReg(){
-    const usernameValue = username.value.trim();
+    const firstnameValue = firstname.value.trim();
+    const lastnameValue = lastname.value.trim();
     const emailValue = email.value.trim();
     const addressValue = address.value.trim();
     const passwordValue = password.value.trim();
     const password2Value = password2.value.trim();
 
-    if(usernameValue === ''){
-        setErrorFor(username, 'Username cannot be blank');
-    }else if(!isUsername(usernameValue)){
-        setErrorFor(username, 'Username is not valid');
+    if(firstnameValue === ''){
+        setErrorFor(firstname, 'First name cannot be blank');
+    }else if(!isUsername(firstnameValue)){
+        setErrorFor(firstname, 'First name is not valid');
     }else{
-        setSuccessFor(username);
+        setSuccessFor(firstname);
+    }
+
+    if(lastnameValue === ''){
+        setErrorFor(lastname, 'Last name cannot be blank');
+    }else if(!isUsername(lastnameValue)){
+        setErrorFor(lastname, 'Last name is not valid');
+    }else{
+        setSuccessFor(lastname);
     }
 
     if(emailValue === ''){
@@ -70,15 +80,15 @@ function proveraReg(){
 }
 
 function proveraLog(){
-    const usernameValueLog = usernameLog.value.trim();
+    const emailLogValue = emailLog.value.trim();
     const passwordValueLog = passwordLog.value.trim();
 
-    if(usernameValueLog === ''){
-        setErrorFor(usernameLog, 'Username cannot be blank');
-    }else if(!isUsernameLog(usernameValueLog)){
-        setErrorFor(usernameLog, 'Username is not valid');
+    if(emailLogValue === ''){
+        setErrorFor(emailLog, 'Username cannot be blank');
+    }else if(!isEmail(emailLogValue)){
+        setErrorFor(emailLog, 'Username is not valid');
     }else{
-        setSuccessFor(usernameLog);
+        setSuccessFor(emailLog);
     }
 
     if(passwordValueLog === ''){
@@ -110,12 +120,12 @@ function isEmail(email){
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
-function isUsername(username){
-    return /^[a-z0-9\_]+$/.test(username);
+function isFirstName(firstname){
+    return /^[A-ZČĆŽŠĐ][a-zčćžšđ]{2,14}(\s[A-ZČĆŽŠĐ][a-zčćžšđ]{2,19})+$/.test(firstname);
 }
 
-function isUsernameLog(usernameLog){
-    return /^[a-z0-9\_]+$/.test(usernameLog);
+function isLastName(lastname){
+    return /^[A-ZČĆŽŠĐ][a-zčćžšđ]{2,14}(\s[A-ZČĆŽŠĐ][a-zčćžšđ]{2,19})+$/.test(lastname);
 }
 
 function isAdress(address){
