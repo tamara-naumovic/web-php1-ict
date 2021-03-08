@@ -24,7 +24,7 @@
                     Registration form
                 </div>
                 <div class="form">
-                    <form action="">
+                    <form action="" method="post">
 
                         <div class="input_polje">
                             <label for="">First Name</label>
@@ -85,8 +85,8 @@
                 <div class="title">
                     Login
                 </div>
-                <div class="form">
-                    <form action="">
+                <div class="form" >
+                    <form action="" method="post">
 
                         <div class="input_polje">
                             <label for="">Email</label>
