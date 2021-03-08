@@ -1,43 +1,43 @@
-$(document).ready(function(){
+window.onload = function(){
 
-    // DINAMICKO ISPISIVANJE MENIJA
+    // NAV ISPIS
 
     var navmeni = [
         {
             "id" : 1,
-            "naziv" : "Home",
-            "url" : "index.php",
+            "href" : "index.php",
+            "naziv" : "Home"
         },
         {
             "id" : 2,
-            "naziv" : "Store",
-            "url" : "store.php",
+            "href" : "store.php",
+            "naziv" : "Store"
         },
         {
             "id" : 3,
-            "naziv" : "About",
-            "url" : "about.php",
+            "href" : "about.php",
+            "naziv" : "About"
         },
         {
             "id" : 4,
-            "naziv" : "Contact",
-            "url" : "contact.php",
+            "href" : "contact.php",
+            "naziv" : "Contact"
         },
         {
             "id" : 5,
-            "naziv" : "Login",
-            "url" : "login.php",
+            "href" : "login.php",
+            "naziv" : "Login"
         }
-    ];
+    ]
 
-    var ispis = "";
+    var ispis='';
     for(element of navmeni){
-        ispis += '<li class="stavka"><a class="link" href='+element.url+'>'+element.naziv+'</a></li>';
+        ispis+=`<li class="stavka"><a class="link" href="${element.href}">${element.naziv}</a></li>`;
     }
 
     document.querySelector(".menu").innerHTML=ispis;
 
-    // SLAJDER ISPISIVANJE I ANIMACIJA
+    // SLAJDER ISPIS I ANIMACIJA
 
     var slajder = [
         {
@@ -65,19 +65,18 @@ $(document).ready(function(){
             src : "images/banner5.jpg",
             alt : "banner5",
         }
-    ];
+    ]
 
-    var ispis1 = '';
-
-    for(let i=0; i<slajder.length; i++){
-        if(i == 0){
-            ispis1 += `<input type="radio" name="radio-btn" id="radio1"/>
+    var ispis1='';
+    for (let i = 0; i < slajder.length; i++) {
+        if(i==0){
+            ispis1+=`<input type="radio" name="radio-btn" id="radio1"/>
             <input type="radio" name="radio-btn" id="radio2"/>
             <input type="radio" name="radio-btn" id="radio3"/>
             <input type="radio" name="radio-btn" id="radio4"/>
             <input type="radio" name="radio-btn" id="radio5"/>
             
-            <div class="slide first active">
+            <div class="slide first">
                 <a href="#"><img src="${slajder[i].src}" alt="${slajder[i].alt}"/></a>
             </div>
 
@@ -96,26 +95,22 @@ $(document).ready(function(){
                 <label for="radio4" class="manual-btn"></label>
                 <label for="radio5" class="manual-btn"></label>
             </div>`;
-        }
-        else{
-            ispis1 += `<div class="slide">
+        }else{
+            ispis1+=`<div class="slide">
             <a href="#"><img src="${slajder[i].src}" alt="${slajder[i].alt}"/></a>
         </div>`;
         }
     }
 
-    document.querySelector(".slides").innerHTML = ispis1;
+    document.querySelector(".slides").innerHTML=ispis1;
 
-    
     var brojac = 1;
-    setInterval(function(){
-        document.getElementById('radio' + brojac).checked = true;
-        brojac ++;
-        if(brojac > 5){
-            brojac = 1;
-        }
-    }, 5000);
+        setInterval(function(){
+            document.getElementById('radio' + brojac).checked = true;
+            brojac ++;
+            if(brojac > 5){
+                brojac = 1;
+            }
+        }, 5000);
 
-    
-    
-});
+}

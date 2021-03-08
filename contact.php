@@ -15,36 +15,41 @@
     <div class="okvir">
         <?php include("header.php"); ?>
         <div id="cnt-okvir">
-            <div class="forma_cnt">
-                <h2>Contact us</h2>
-                <div id="error_message"></div>
-
-                <form action="" id="myform">
-                    <div class="input_field">
-                        <input type="text" id="tbname" placeholder="Name"/>
+            <div class="forma contact">
+                <div class="title">
+                    Contact
+                </div>
+                <form action="" id="formCnt" class="form">
+                    <div class="form-control">
+                        <label>Username</label>
+                        <input type="text" name="username" id="usernameCnt" placeholder="Username"/>
+                        <i class="fas fa-check"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small class="small">Error message</small>
                     </div>
-                    <div class="input_field">
-                        <input type="text" id="tbsubject" placeholder="Subject"/>
+                    <div class="form-control">
+                        <label>Email</label>
+                        <input type="email" name="email" id="emailCnt" placeholder="Email"/>
+                        <i class="fas fa-check"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small class="small">Error message</small>
                     </div>
-                    <div class="input_field">
-                        <input type="text" id="tbphone" placeholder="Phone"/>
+                    <div class="form-control">
+                        <label>Message</label>
+                        <textarea name="message" id="textareaCnt" placeholder="Message"></textarea>
+                        <i class="fas fa-check"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small class="small">Error message</small>
                     </div>
-                    <div class="input_field">
-                        <input type="text" id="tbemail" placeholder="Email"/>
-                    </div>
-                    <div class="input_field">
-                        <textarea id="tbmessage" placeholder="Message"></textarea>
-                    </div>
-                    <div class="cntbtn">
-                        <input type="submit" id="cbtn" value="submit"/>
-                    </div>
+                    <input type="submit" name="btnCnt" id="btnCnt" value="Send"/>
                 </form>
             </div>
         </div>
         <div class="cistac"></div>
         <?php include("footer.php"); ?>
 
-        <script type="text/javascript" src="js/proba.js"></script>
+        <script type="text/javascript" src="js/validacijaCnt.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
     </div>
 </body>
 </html>

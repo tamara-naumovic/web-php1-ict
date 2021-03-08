@@ -16,19 +16,23 @@
     width: 100%;
     height: 100%;
     justify-content: center;
+    align-items: center;
     background-color: #fec107;
 }
 
 /* FORMA I POLJA*/
 
 .forma{
-    max-width: 500px;
-    width: 100%;
+    width: 600px;
+    max-width: 100%;
+    height: 730px;
     min-height: 500px;
     background-color: #fff;
-    margin: 20px auto;
+    margin: auto;
     padding: 30px;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .forma .title{
@@ -37,125 +41,102 @@
     text-transform: uppercase;
     color: #fec107;
     text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px;
+}
+
+.title h2{
+    margin: 0;
 }
 
 .forma .form{
     width: 100%;
     margin-top: 30px;
+    padding: 30px 20px;
 }
 
-.forma .form .input_polje{
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.forma .form .input_polje label{
-    width: 200px;
-    color: #757575;
-    margin-right: 10px;
-    font-size: 15px;
-}
-
-.forma .form .input_polje .input,
-.forma .form .input_polje .textarea{
-    width: 100%;
-    outline: none;
-    border: 1px solid #d5dbd9;
-    font-size: 14px;
-    padding: 8px 10px;
-    border-radius: 3px;
-    transition: all 0.3s;
-}
-
-.forma .form .input_polje .textarea{
-    resize: none;
-    height: 70px;
-}
-
-.forma .form .input_polje .custom_select{
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
     position: relative;
-    width: 100%;
-    height: 37px;
 }
 
-.forma .form .input_polje .custom_select select{
-    -webkit-appearance: none;
-    appearance: none;
-    border: 1px solid #d5dbd9;
-    padding: 8px 10px;
-    border-radius: 3px;
-    outline: none;
-    width: 100%;
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
-.forma .form .input_polje .custom_select::before{
-    content: "";
-    position: absolute;
-    top: 12px;
-    right: 10px;
-    border: 8px solid;
-    border-color: #d5dbd9 transparent transparent transparent;
-    pointer-events: none;
-}
-
-.forma .form .input_polje .input:focus,
-.forma .form .input_polje .textarea:focus,
-.forma .form .input_polje select:focus{
-    border: 1px solid #fec107;
-}
-
-.forma .form .input_polje p{
-    font-size: 14px;
-    color: #757575;
-}
-
-.forma .form .input_polje .check{
-    width: 15px;
-    height: 15px;
-    position: relative;
+.form-control input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
     display: block;
-    cursor: pointer;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
 }
 
-.forma .form .input_polje .check input[type="checkbox"]{
+.form-control.success input{
+    border-color: #2ecc71;
+}
+
+.form-control.error input{
+    border-color: #e74c3c;
+}
+
+.form-control i{
     position: absolute;
-    top: 0;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-check{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
     left: 0;
-    opacity: 1;
 }
 
-.forma .form .input_polje .btnReg{
-    width: 100%;
-    padding: 8px 10px;
-    font-size: 15px;
-    border: 0;
-    background-color: #fec107;
+.form-control.error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+#btnReg{
+    background: #fec107;
+    border: 2px solid #fec107;
+    border-radius: 4px;
     color: #fff;
-    cursor: pointer;
-    border-radius: 3px;
-    outline: none;
-}
-
-.forma .form .input_polje .btnReg:hover{
-    background-color: #ffd658;
-}
-
-.forma .form .input_polje .btnLog{
+    display: block;
+    font-size: 16px;
+    padding: 10px;
     width: 100%;
-    padding: 8px 10px;
-    font-size: 15px;
-    border: 0;
-    background-color: #fec107;
-    color: #fff;
     cursor: pointer;
-    border-radius: 3px;
-    outline: none;
 }
 
-.forma .form .input_polje:last-child{
-    margin-bottom: 0;
+#btnLog{
+    background: #fec107;
+    border: 2px solid #fec107;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
 }
+
+
 
 .cistac{
     clear: both;

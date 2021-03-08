@@ -262,79 +262,132 @@ ul.menu{
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     justify-content: center;
-    outline: none;
+    align-items: center;
 }
 
-.forma_cnt {
-    max-width: 500px;
-    width: 100%;
+.forma{
+    width: 600px;
+    max-width: 100%;
+    height: 730px;
     min-height: 500px;
     background-color: #fff;
-    margin: 20px auto;
+    margin: auto;
     padding: 30px;
-    box-shadow: 5px 5px 7px rgb(0 0 0 / 13%);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.forma_cnt h2{
+.forma .title{
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
     color: #fec107;
     text-align: center;
-    margin-bottom: 30px;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px;
 }
 
-.forma_cnt .input_field{
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
+.title h2{
+    margin: 0;
 }
 
-.forma_cnt .input_field input[type="text"],
-.forma_cnt textarea{
+.forma .form{
     width: 100%;
-    outline: none;
-    border: 1px solid #d5dbd9;
-    font-size: 16px;
-    padding: 8px 10px;
-    border-radius: 3px;
-    transition: all 0.3s;
-    height: 50px;
+    margin-top: 30px;
+    padding: 30px 20px;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
 }
 
-.forma_cnt textarea{
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.form-control input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-control textarea{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
     resize: none;
     height: 150px;
+    margin-top: 10px;
 }
 
-.forma_cnt .input_field input[type="text"]:focus,
-.forma_cnt textarea:focus{
-    border: 1px solid #fec107;
+.form-control.success textarea{
+    border-color: #2ecc71;
 }
 
-.forma_cnt .cntbtn input[type="submit"]{
-    width: 100%;
-    padding: 8px 10px;
-    font-size: 15px;
-    border: 0;
-    background-color: #fec107;
+.form-control.error textarea{
+    border-color: #e74c3c;
+}
+
+.form-control.success input{
+    border-color: #2ecc71;
+}
+
+.form-control.error input{
+    border-color: #e74c3c;
+}
+
+.form-control i{
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-check{
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle{
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.form-control.error small{
+    visibility: visible;
+    color: #e74c3c;
+}
+
+#btnCnt{
+    background: #fec107;
+    border: 2px solid #fec107;
+    border-radius: 4px;
     color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
     cursor: pointer;
-    border-radius: 3px;
-    outline: none;
-    text-transform: uppercase;
-    height: 50px;
-    margin-top: 30px;
-}
-
-.forma_cnt .cntbtn input[type="submit"]:hover{
-    background-color: #ffd658;
-}
-
-#cnt_okvir .forma_cnt .input_field:last-child{
-    margin-bottom: 0;
 }
 
 /* ABOUT */
