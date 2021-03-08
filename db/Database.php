@@ -2,9 +2,9 @@
 
 class Database
 {
-    private $hostname = "localhost";
-    private $username = "root";
-    private $password = "";
+    private $hostname = "sql105.epizy.com";
+    private $username = "epiz_28108128";
+    private $password = "szMN5MxRDGl";
     private $dbname;
     private $dblink;
     private $result;

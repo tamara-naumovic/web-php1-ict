@@ -8,7 +8,7 @@ class Controler{
     
     function __construct()
     {
-        $this->mydb = new Database("acabaza");
+        $this->mydb = new Database("epiz_28108128_webshopprojekat");
     }
 
     public static function getInstance()
@@ -107,7 +107,7 @@ class Controler{
     }
     public function insertKorisnik($values){
         $values[]=2;
-        $this->mydb->insert("korisnik","ime,prezime, email, sifra, adresa, pol_id, uloga_id",$values);
+        $this->mydb->insert("korisnik","ime,prezime, email, sifra, adresa, uloga_id",$values);
         return $this->mydb->getResult();
 
     }
@@ -127,14 +127,9 @@ class Controler{
         return $this->mydb->getResult();
     }
 
-    // pol
 
-    public function getPol(){
-        $this->mydb->select("pol","*", null, null, null, null, null);
-        return $this->mydb->getResult();
-    }
 
-     // pol
+     // slika
 
      public function getSlika(){
         $this->mydb->select("slika","*", null, null, null, null, null);
