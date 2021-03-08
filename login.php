@@ -14,7 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
 </head>
-
+ 
 <body>
     <div class="okvir">
         <?php include("header.php"); ?>
@@ -23,93 +23,73 @@
                 <div class="title">
                     Registration form
                 </div>
-                <div class="form">
-                    <form action="">
-
-                        <div class="input_polje">
-                            <label for="">First Name</label>
-                            <input type="text" class="input"/>
-                        </div>
-
-                        <div class="input_polje">
-                            <label for="">Last Name</label>
-                            <input type="text" class="input"/>
-                        </div>
-
-                        <div class="input_polje">
-                            <label for="">Password</label>
-                            <input type="password" class="input"/>
-                        </div>
-
-                        <div class="input_polje">
-                            <label for="">Confirm Password</label>
-                            <input type="password" class="input"/>
-                        </div>
-
-                        <div class="input_polje">
-                            <label for="">Gender</label>
-                            <div class="custom_select">
-                                <select>
-                                    <option value="">Select</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="input_polje">
-                            <label for="">Email address</label>
-                            <input type="email" class="input" placeholder="example@mail.com"/>
-                        </div>
-
-                        <div class="input_polje">
-                            <label for="">Address</label>
-                            <textarea class="textarea"></textarea>
-                        </div>
-
-                        <div class="input_polje terms">
-                            <label for="" class="check">
-                                <input type="checkbox"/>
-                                <span class="checkmark"></span>
-                            </label>
-                            <p>Agreed to terms and conditions</p>
-                        </div>
-
-                        <div class="input_polje">
-                            <input type="submit" value="Register" class="btnReg"/>
-                        </div>
-                    </form>
-                </div>
+                <form action="" id="formReg" class="form">
+                    <div class="form-control">
+                        <label>Username</label>
+                        <input type="text" name="username" id="username" placeholder="Username"/>
+                        <i class="fas fa-check"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small class="small">Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Email</label>
+                        <input type="email" name="email" id="email" placeholder="Email"/>
+                        <i class="fas fa-check"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small class="small">Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Address</label>
+                        <input type="text" name="address" id="address" placeholder="Address"/>
+                        <i class="fas fa-check"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small class="small">Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Password</label>
+                        <input type="password" name="password" id="password" placeholder="Password"/>
+                        <i class="fas fa-check"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small class="small">Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Confirm Password</label>
+                        <input type="password" name="username" id="confpassword" placeholder="Confirm password"/>
+                        <i class="fas fa-check"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small class="small">Error message</small>
+                    </div>
+                    <input type="submit" name="btnReg" id="btnReg" value="Register"/>
+                </form>
             </div>
             <div class="forma login">
                 <div class="title">
                     Login
                 </div>
-                <div class="form">
-                    <form action="">
-
-                        <div class="input_polje">
-                            <label for="">Email</label>
-                            <input type="email" class="input"/>
-                        </div>
-
-                        <div class="input_polje">
-                            <label for="">Password</label>
-                            <input type="password" class="input"/>
-                        </div>
-
-                        <div class="input_polje">
-                            <input type="submit" value="Login" class="btnLog"/>
-                        </div>
-
-                    </form>
-                </div>
+                <form action="" id="formLog" class="form">
+                    <div class="form-control">
+                        <label>Username</label>
+                        <input type="text" name="username" id="usernameLog" placeholder="Username"/>
+                        <i class="fas fa-check"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small class="small">Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Password</label>
+                        <input type="password" name="password" id="passwordLog" placeholder="Password"/>
+                        <i class="fas fa-check"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small class="small">Error message</small>
+                    </div>
+                    <input type="submit" name="btnLog" id="btnLog" value="Login"/>
+                </form>
             </div>
         </div>
         <div class="cistac"></div>
         <?php include("footer.php"); ?>
 
-        <script type="text/javascript" src="js/proba.js"></script>
+        <script type="text/javascript" src="js/validacija.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
     </div>
 </body>
 
