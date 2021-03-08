@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <link rel="stylesheet" href="css/reglog.css" type="text/css">
     <script src="https://kit.fontawesome.com/d8531d1ca7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
 </head>
 
@@ -58,22 +59,12 @@
 
                         <div class="input_polje">
                             <label for="">Email address</label>
-                            <input type="text" class="input" placeholder="example@mail.com"/>
-                        </div>
-
-                        <div class="input_polje">
-                            <label for="">Phone number</label>
-                            <input type="text" class="input"/>
+                            <input type="email" class="input" placeholder="example@mail.com"/>
                         </div>
 
                         <div class="input_polje">
                             <label for="">Address</label>
                             <textarea class="textarea"></textarea>
-                        </div>
-
-                        <div class="input_polje">
-                            <label for="">Postal Code</label>
-                            <input type="text" class="input"/>
                         </div>
 
                         <div class="input_polje terms">
@@ -117,6 +108,8 @@
         </div>
         <div class="cistac"></div>
         <?php include("footer.php"); ?>
+
+        <script type="text/javascript" src="js/proba.js"></script>
     </div>
 </body>
 
