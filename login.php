@@ -23,6 +23,65 @@
                 <div class="title">
                     Registration form
                 </div>
+<<<<<<< HEAD
+                <div class="form">
+                    <form action="" method="post">
+
+                        <div class="input_polje">
+                            <label for="">First Name</label>
+                            <input type="text" class="input"/>
+                        </div>
+
+                        <div class="input_polje">
+                            <label for="">Last Name</label>
+                            <input type="text" class="input"/>
+                        </div>
+
+                        <div class="input_polje">
+                            <label for="">Password</label>
+                            <input type="password" class="input"/>
+                        </div>
+
+                        <div class="input_polje">
+                            <label for="">Confirm Password</label>
+                            <input type="password" class="input"/>
+                        </div>
+
+                        <div class="input_polje">
+                            <label for="">Gender</label>
+                            <div class="custom_select">
+                                <select>
+                                    <option value="">Select</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input_polje">
+                            <label for="">Email address</label>
+                            <input type="email" class="input" placeholder="example@mail.com"/>
+                        </div>
+
+                        <div class="input_polje">
+                            <label for="">Address</label>
+                            <textarea class="textarea"></textarea>
+                        </div>
+
+                        <div class="input_polje terms">
+                            <label for="" class="check">
+                                <input type="checkbox"/>
+                                <span class="checkmark"></span>
+                            </label>
+                            <p>Agreed to terms and conditions</p>
+                        </div>
+
+                        <div class="input_polje">
+                            <input type="submit" value="Register" class="btnReg"/>
+                        </div>
+                    </form>
+                </div>
+=======
                 <form action="" id="formReg" class="form">
                     <div class="form-control">
                         <label>First Name</label>
@@ -68,11 +127,33 @@
                     </div>
                     <input type="submit" name="btnReg" id="btnReg" value="Register"/>
                 </form>
+>>>>>>> 3f641ede293e63c32c42015efee0e26ac20ea448
             </div>
             <div class="forma login">
                 <div class="title">
                     Login
                 </div>
+<<<<<<< HEAD
+                <div class="form" >
+                    <form action="" method="post">
+
+                        <div class="input_polje">
+                            <label for="">Email</label>
+                            <input type="email" class="input"/>
+                        </div>
+
+                        <div class="input_polje">
+                            <label for="">Password</label>
+                            <input type="password" class="input"/>
+                        </div>
+
+                        <div class="input_polje">
+                            <input type="submit" value="Login" class="btnLog"/>
+                        </div>
+
+                    </form>
+                </div>
+=======
                 <form action="" id="formLog" class="form">
                     <div class="form-control">
                         <label>Email</label>
@@ -90,6 +171,7 @@
                     </div>
                     <input type="submit" name="btnLog" id="btnLog" value="Login"/>
                 </form>
+>>>>>>> 3f641ede293e63c32c42015efee0e26ac20ea448
             </div>
         </div>
         <div class="cistac"></div>
