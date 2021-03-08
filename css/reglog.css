@@ -7,6 +7,8 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+/* OKVIR */
+
 #log-okvir{
     padding: 50px;
     display: flex;
@@ -17,6 +19,7 @@
     background-color: #fec107;
 }
 
+/* FORMA I POLJA*/
 
 .forma{
     max-width: 500px;
@@ -86,7 +89,7 @@
     width: 100%;
 }
 
-.forma .form .input_polje .custom_select:before{
+.forma .form .input_polje .custom_select::before{
     content: "";
     position: absolute;
     top: 12px;
@@ -150,10 +153,6 @@
     outline: none;
 }
 
-.forma .form .input_polje .btnLog:hover{
-    background-color: #ffd658;
-}
-
 .forma .form .input_polje:last-child{
     margin-bottom: 0;
 }
@@ -162,7 +161,7 @@
     clear: both;
 }
 
-@media (max-width: 420px){
+@media (max-width: 600px){
     .forma .form .input_polje{
         flex-direction: column;
         align-items: flex-start;

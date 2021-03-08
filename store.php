@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="https://kit.fontawesome.com/d8531d1ca7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="okvir">
@@ -16,6 +17,8 @@
         
         <div class="cistac"></div>
         <?php include("footer.php"); ?>
+
+        <script type="text/javascript" src="js/proba.js"></script>
     </div>
 </body>
 </html>
