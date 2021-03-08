@@ -114,8 +114,16 @@ class Controler{
 
     // meni
 
-    public function getMeni(){
-        $this->mydb->select("meni","*", null, null, null, null, null);
+    public function getMeniStandard(){
+        $this->mydb->select("meni","home, store, about, contact, login, korpa", null, null, null, null, null);
+        return $this->mydb->getResult();
+    }
+    public function getMeniUser(){
+        $this->mydb->select("meni","home, store, about, contact, login, korpa, logout", null, null, null, null, null);
+        return $this->mydb->getResult();
+    }
+    public function getMeniAdmin(){
+        $this->mydb->select("meni","admin, logout", null, null, null, null, null);
         return $this->mydb->getResult();
     }
 
