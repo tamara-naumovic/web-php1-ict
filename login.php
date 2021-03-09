@@ -1,3 +1,24 @@
+<?php
+
+include("control/Controler.php");
+$ctrl = Controler::getInstance();
+
+
+session_start();
+
+if (isset($_POST['emailLog']) && isset($_POST['passwordLog'])) {
+    echo "usao";
+    $email = $_POST['emailLog'];
+    $password = $_POST['passwordLog'];
+    $korisnik = $ctrl->getKorisnik($email, $password);
+    $row= $korisnik->fetch_object();
+    $_SESSION['loggeduser'] = [$row->ime,$row->uloga_id];
+    header('Location: index.php');
+    exit();
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +44,7 @@
                 <div class="title">
                     Registration form
                 </div>
-                <form action="" id="formReg" class="form">
+                <form action="" id="formReg" class="form" method="post">
                     <div class="form-control">
                         <label>First Name</label>
                         <input type="text" name="firstname" id="firstname" placeholder="First Name"/>
@@ -73,7 +94,7 @@
                 <div class="title">
                     Login
                 </div>
-                <form action="" id="formLog" class="form">
+                <form action="" id="formLog" class="form" method="post">
                     <div class="form-control">
                         <label>Email</label>
                         <input type="email" name="emailLog" id="emailLog" placeholder="Email"/>
@@ -83,7 +104,7 @@
                     </div>
                     <div class="form-control">
                         <label>Password</label>
-                        <input type="password" name="password" id="passwordLog" placeholder="Password"/>
+                        <input type="password" name="passwordLog" id="passwordLog" placeholder="Password"/>
                         <i class="fas fa-check"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <small class="small">Error message</small>
@@ -96,7 +117,8 @@
         <?php include("footer.php"); ?>
 
         <script type="text/javascript" src="js/validacija.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/meni.js"></script>
+
     </div>
 </body>
 
