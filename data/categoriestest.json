@@ -1,0 +1,34 @@
+[
+    {
+        "id" : 1,
+        "href" : "store.php",
+        "image" : {
+            "src" : "images/mouse_kat.jpg",
+            "alt" : "mis"
+        }
+    },
+    {
+        "id" : 2,
+        "href" : "store.php",
+        "image" : {
+            "src" : "images/keyboard_kat.jpg",
+            "alt" : "tastatura"
+        }
+    },
+    {
+        "id" : 3,
+        "href" : "store.php",
+        "image" : {
+            "src" : "images/headphones_kat.jpg",
+            "alt" : "slusalice"
+        }
+    },
+    {
+        "id" : 4,
+        "href" : "store.php",
+        "image" : {
+            "src" : "images/monitor_kat.jpg",
+            "alt" : "monitor"
+        }
+    }
+]

@@ -150,7 +150,5 @@
     .forma .form .input_polje label{
         margin-bottom: 5px;
     }
-    .forma .form .input_polje.terms{
-        flex-direction: row;
-    }
+    
 }

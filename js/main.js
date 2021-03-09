@@ -1,41 +1,51 @@
+const BASEURL = "data/";
+
+// ajax callback
+function ajaxCallBack(url, method, result){
+    $.ajax({
+        url: url,
+        method: method,
+        dataType: "json",
+        success: result,
+        error: function(xhr){console.log(xhr);}
+    });
+}
+
+// nav ispis f-ja
+function printNavigation(data){
+    let html = '';
+    for(let linkElement of data){
+        html += `<li class="stavka"><a class="link" href="${linkElement.href}">${linkElement.textLink}</a></li>`;
+    }
+    $("#nav").html(html);
+}
+
+// kategorije f-ja proba - USPELO
+function printCat(data){
+    let html = '';
+    for(let elementCat of data){
+        html += `<div class="col-3">
+                    <a href="${elementCat.href}"><img src="${elementCat.image.src}" alt="${elementCat.image.src}"/></a>
+                </div>`;
+    }
+    $("#kategorije").html(html);
+}
+
+
 window.onload = function(){
 
-    // NAV ISPIS
+    // NAV ISPIS 
 
-    var navmeni = [
-        {
-            "id" : 1,
-            "href" : "index.php",
-            "naziv" : "Home"
-        },
-        {
-            "id" : 2,
-            "href" : "store.php",
-            "naziv" : "Store"
-        },
-        {
-            "id" : 3,
-            "href" : "about.php",
-            "naziv" : "About"
-        },
-        {
-            "id" : 4,
-            "href" : "contact.php",
-            "naziv" : "Contact"
-        },
-        {
-            "id" : 5,
-            "href" : "login.php",
-            "naziv" : "Login"
-        }
-    ]
+    // provera gde se nalazimo
 
-    var ispis='';
-    for(element of navmeni){
-        ispis+=`<li class="stavka"><a class="link" href="${element.href}">${element.naziv}</a></li>`;
-    }
+    // podaci navigation.json
+    ajaxCallBack(BASEURL + "navigation.json", "get", function(result){
+        printNavigation(result);
+    });
 
-    document.querySelector(".menu").innerHTML=ispis;
+    ajaxCallBack(BASEURL + "categoriestest.json", "get", function(result){
+        printCat(result);
+    });
 
     // SLAJDER ISPIS I ANIMACIJA
 
@@ -52,7 +62,7 @@ window.onload = function(){
         },
         {
             "id" : 3,
-            src : "images/banner3.png",
+            src : "images/banner3.jpg",
             alt : "banner3",
         },
         {
@@ -114,3 +124,5 @@ window.onload = function(){
         }, 5000);
 
 }
+
+// TOGGLE MENI

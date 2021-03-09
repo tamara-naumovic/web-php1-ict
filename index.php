@@ -23,40 +23,157 @@
             </div>
         </div>
 
-        <div class="main_container">
-            <!--<div class="item">
-                <div class="img_holder">
-                    <img src="images/logo.jpg" alt="logo">
-                </div>
-                <div class="item_info">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi natus sapiente libero aliquid sit minima dolores sunt, necessitatibus magni obcaecati nesciunt iure maxime impedit dolorem magnam quidem similique repudiandae totam, doloremque eum architecto corporis laboriosam vel doloribus. Enim adipisci minus ducimus amet vero omnis itaque reiciendis, dolorem labore hic odio?
-                </div>
-            </div>
-            <div class="item">
-                <div class="img_holder">
-                    <img src="images/logo.jpg" alt="logo">
-                </div>
-                <div class="item_info">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi natus sapiente libero aliquid sit minima dolores sunt, necessitatibus magni obcaecati nesciunt iure maxime impedit dolorem magnam quidem similique repudiandae totam, doloremque eum architecto corporis laboriosam vel doloribus. Enim adipisci minus ducimus amet vero omnis itaque reiciendis, dolorem labore hic odio?
-                </div>
-            </div>
-            <div class="item">
-                <div class="img_holder">
-                    <img src="images/logo.jpg" alt="logo">
-                </div>
-                <div class="item_info">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi natus sapiente libero aliquid sit minima dolores sunt, necessitatibus magni obcaecati nesciunt iure maxime impedit dolorem magnam quidem similique repudiandae totam, doloremque eum architecto corporis laboriosam vel doloribus. Enim adipisci minus ducimus amet vero omnis itaque reiciendis, dolorem labore hic odio?
+        <div class="container">
+            <div class="categories">
+                <div class="small-container">
+                <h2>Categories</h2>
+                    <div class="row" id="kategorije">
+                        <!--<div class="col-3">
+                            <a href="store.php"><img src="images/mouse_kat.jpg" alt="mis"/></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="store.php"><img src="images/keyboard_kat.jpg" alt="tastatura"/></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="store.php"><img src="images/headphones_kat.jpg" alt="slusalice"/></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="store.php"><img src="images/monitor_kat.jpg" alt="monitor"/></a>
+                        </div>-->
+                    </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="img_holder">
-                    <img src="images/logo.jpg" alt="logo">
+
+            <div class="small-container">
+                <h2>Featured Products</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                    </div>
                 </div>
-                <div class="item_info">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi natus sapiente libero aliquid sit minima dolores sunt, necessitatibus magni obcaecati nesciunt iure maxime impedit dolorem magnam quidem similique repudiandae totam, doloremque eum architecto corporis laboriosam vel doloribus. Enim adipisci minus ducimus amet vero omnis itaque reiciendis, dolorem labore hic odio?
+
+                <h2>Latest Products</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                        <h4>Naziv proizvoda</h4>
+                        <div class="raiting">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star-half"></i>
+                        </div>
+                        <p>Cena</p>
+                        <a href="#">Dodaj u korpu</a>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                        <h4>Naziv proizvoda</h4>
+                        <div class="raiting">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star-half"></i>
+                        </div>
+                        <p>Cena</p>
+                        <a href="#">Dodaj u korpu</a>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                        <h4>Naziv proizvoda</h4>
+                        <div class="raiting">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Cena</p>
+                        <a href="#">Dodaj u korpu</a>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                        <h4>Naziv proizvoda</h4>
+                        <div class="raiting">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>Cena</p>
+                        <a href="#">Dodaj u korpu</a>
+                    </div>
                 </div>
-            </div>-->
+                <div class="row">
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                        <h4>Naziv proizvoda</h4>
+                        <div class="raiting">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star-half"></i>
+                        </div>
+                        <p>Cena</p>
+                        <a href="#">Dodaj u korpu</a>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                        <h4>Naziv proizvoda</h4>
+                        <div class="raiting">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star-half"></i>
+                        </div>
+                        <p>Cena</p>
+                        <a href="#">Dodaj u korpu</a>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                        <h4>Naziv proizvoda</h4>
+                        <div class="raiting">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Cena</p>
+                        <a href="#">Dodaj u korpu</a>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                        <h4>Naziv proizvoda</h4>
+                        <div class="raiting">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>Cena</p>
+                        <a href="#">Dodaj u korpu</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
         <div class="cistac"></div>
         <?php include("footer.php"); ?>
 

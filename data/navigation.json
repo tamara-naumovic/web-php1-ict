@@ -1,0 +1,22 @@
+[
+    {
+        "href" : "index.php",
+        "textLink" : "Home"
+    },
+    {
+        "href" : "store.php",
+        "textLink" : "Store"
+    },
+    {
+        "href" : "about.php",
+        "textLink" : "About"
+    },
+    {
+        "href" : "contact.php",
+        "textLink" : "Contact"
+    },
+    {
+        "href" : "login.php",
+        "textLink" : "Login"
+    }
+]

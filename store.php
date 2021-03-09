@@ -15,6 +15,72 @@
     <div class="okvir">
         <?php include("header.php"); ?>
         
+        <div class="okvir-store">
+            <div class="row row-2">
+                <h2>All products</h2>
+                <select name="" id="">
+                    <option value="">Default</option>
+                    <option value="">Sort by name</option>
+                    <option value="">Sort by price</option>
+                </select>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/logo.jpg" alt="logo"/>
+                    <h4>Naziv proizvoda</h4>
+                    <div class="raiting">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star-half"></i>
+                    </div>
+                    <p>Cena</p>
+                    <a href="#">Dodaj u korpu</a>
+                </div>
+                <div class="col-4">
+                    <img src="images/logo.jpg" alt="logo"/>
+                    <h4>Naziv proizvoda</h4>
+                    <div class="raiting">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star-half"></i>
+                    </div>
+                    <p>Cena</p>
+                    <a href="#">Dodaj u korpu</a>
+                </div>
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                        <h4>Naziv proizvoda</h4>
+                        <div class="raiting">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>Cena</p>
+                        <a href="#">Dodaj u korpu</a>
+                    </div>
+                    <div class="col-4">
+                        <img src="images/logo.jpg" alt="logo"/>
+                        <h4>Naziv proizvoda</h4>
+                        <div class="raiting">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <p>Cena</p>
+                        <a href="#">Dodaj u korpu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="cistac"></div>
         <?php include("footer.php"); ?>
 

@@ -32,7 +32,6 @@ ul li a{
     padding: 0 50px;
     border-radius: 5px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -48,6 +47,7 @@ ul li a{
 
 ul.menu{
     display: flex;
+    width: 100%;
 }
 
 .navbar ul.menu a{
@@ -63,10 +63,7 @@ ul.menu{
 .navbar .navbar_left{
     display: flex;
     align-items: center;
-}
-
-.navbar .navbar_right{
-    display: flex;
+    width: 100%;
 }
 
 .navbar .menu{
@@ -80,37 +77,6 @@ ul.menu{
     border-radius: 25px;
 }
 
-.search_box{
-    position: relative;
-    width: 225px;
-    height: 30px;
-}
-
-.search_box .input_search{
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: 1px solid #505978;
-    outline: none;
-    width: 50px;
-    height: 30px;
-    border-radius: 3px;
-    padding: 10px;
-    padding-right: 30px;
-    transition: all 0.2 ease;
-}
-
-.search_box i{
-    position: absolute;
-    z-index: 1;
-    top: 8px;
-    right: 10px;
-}
-
-.search_box .input_search:focus{
-    width: 250px;
-}
-
 /* SLAJDER */
 
 #slider-container{
@@ -120,7 +86,7 @@ ul.menu{
 }
 
 .slider{
-    width: 1950px;
+    width: 100%;
     height: 500px;
     overflow: hidden;
 }
@@ -147,7 +113,7 @@ ul.menu{
 
 .navigation-manual{
     position: absolute;
-    width: 1950px;
+    width: 100%;
     margin-top: 460px;
     display: flex;
     justify-content: center;
@@ -188,7 +154,7 @@ ul.menu{
 .navigation-auto{
     position: absolute;
     display: flex;
-    width: 1950px;
+    width: 100%;
     justify-content: center;
     margin-top: 460px;
 }
@@ -220,40 +186,98 @@ ul.menu{
     background: #d5dbd9;
 }
 
-/* SADRZAJ */
+/* INDEX */
 
-.main_container{
-    padding: 50px;
+.container{
+    max-width: 1900px;
+    margin: auto;
 }
 
-.main_container .item{
+.row{
     display: flex;
-    width: 100%;
     align-items: center;
-    background-color: #fff;
-    padding: 15px;
-    margin-bottom: 25px;
-    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.125);
-}
-
-.main_container .item .img_holder{
-    width: 350px;
-    height: auto;
-}
-
-.main_container .item .img_holder img{
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 100%;
-    display: block;
-    height: auto;
-    margin: 0 auto;
 }
 
-.main_container .item .item_info{
-    width: calc(100% - 375px);
-    line-height: 24px;
-    margin-left: 25px;
-    text-align: justify;
+.categories{
+    margin: 70px 0;
 }
+
+.col-3{
+    flex-basis: 24%;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width: 100%;
+    height: 330px;
+}
+.small-container{
+    max-width: 1700px;
+    margin: auto;
+}
+
+.col-4{
+    flex-basis: 20%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.col-4 img{
+    width: 100%;
+}
+
+.small-container h2{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #505978;
+    font-size: 40px;
+}
+
+.small-container h2::after{
+    content: '';
+    background-color: #adadad;
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h4{
+    color: #3b5998;
+    font-weight: normal;
+}
+
+.col-4 p{
+    font-size: 15px;
+}
+
+.raiting i{
+    color: #ff523b;
+}
+
+.col-4:hover{
+    transform: translateY(-5px);
+}
+
+
+/* STORE */
+
+
+
+.row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+
 
 /*CONTACT FORM*/
 
@@ -722,26 +746,8 @@ ul.menu{
 
 /* MEDIA */
 
-@media (max-width: 600px){
-    .okvir .navbar .logo{
-        font-size: 20px;
-    }
-    .main_container{
-        padding: 25px;
-    }
-    .main_container .item{
-        flex-direction: column;
-    }
-    .main_container .item .img.img_holder{
-        max-width: 750px;
-        width: 100%;
-    }
-    .main_container .item .item_info{
-        margin-left: 0;
-        width: 100%;
-        margin-top: 10px;
-        text-align: center;
-    }
+@media (max-width: 800px){
+
     .footer .footer_menu{
         flex-direction: column;
         width: 220px;
@@ -752,5 +758,38 @@ ul.menu{
     }
     .footer .partners ul li a{
         margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 1080px){
+    .navbar_left ul{
+        position: absolute;
+        top: 67px;
+        left: -40px;
+        background-color: #333;
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    .navbar_left ul li{
+        position: relative;
+        left: 85.5%;
+    }
+    .navbar_left ul li a{
+        color: #fff;
+    }
+    .meni-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-3, .col-4{
+        flex-basis: 100%;
     }
 }
