@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2021 at 03:39 PM
+-- Generation Time: Mar 09, 2021 at 11:23 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -78,7 +78,6 @@ CREATE TABLE `korisnik` (
   `email` varchar(60) NOT NULL,
   `sifra` varchar(60) NOT NULL,
   `uloga_id` int(11) NOT NULL,
-  `pol_id` int(11) DEFAULT NULL,
   `adresa` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -86,10 +85,11 @@ CREATE TABLE `korisnik` (
 -- Dumping data for table `korisnik`
 --
 
-INSERT INTO `korisnik` (`ID`, `ime`, `prezime`, `email`, `sifra`, `uloga_id`, `pol_id`, `adresa`) VALUES
-(2, 'Tamara', 'Naumovic', 'tamara@elab.rs', 'sifra', 2, NULL, ''),
-(4, 'Aleksandar', 'Naumovic', 'mejl', 'sifra', 2, NULL, 'maksima'),
-(5, 'Pera', 'Peric', 'mejl1', 'sifra1', 2, NULL, 'maksima');
+INSERT INTO `korisnik` (`ID`, `ime`, `prezime`, `email`, `sifra`, `uloga_id`, `adresa`) VALUES
+(2, 'Tamara', 'Naumovic', 'tamara@elab.rs', 'sifra1', 2, ''),
+(4, 'Aleksandar', 'Naumovic', 'mejl@mejl.com', 'sifra1', 2, 'maksima'),
+(5, 'Pera', 'Peric', 'mejl1', 'sifra1', 2, 'maksima'),
+(6, 'admin', 'admin', 'admin@admin.com', 'admin1', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -98,9 +98,24 @@ INSERT INTO `korisnik` (`ID`, `ime`, `prezime`, `email`, `sifra`, `uloga_id`, `p
 --
 
 CREATE TABLE `meni` (
+  `id` int(11) NOT NULL,
   `naziv_linka` varchar(30) NOT NULL,
   `link` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `meni`
+--
+
+INSERT INTO `meni` (`id`, `naziv_linka`, `link`) VALUES
+(1, 'Home', 'index.php'),
+(2, 'Store', 'store.php'),
+(3, 'About', 'about.php'),
+(4, 'Admin', 'admin.php'),
+(5, 'Contact', 'contact.php'),
+(6, 'Korpa', 'korpa.php'),
+(7, 'Login', 'login.php'),
+(8, 'Logout', 'logout.php');
 
 -- --------------------------------------------------------
 
@@ -121,18 +136,8 @@ CREATE TABLE `narudzbina` (
 
 INSERT INTO `narudzbina` (`id`, `korisnik_id`, `ukupna_cena`, `datum`) VALUES
 (3, 4, '500.00', '2021-03-07 22:40:51'),
-(4, 4, '500.00', '2021-03-07 22:41:10');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `pol`
---
-
-CREATE TABLE `pol` (
-  `id` int(11) NOT NULL,
-  `naziv` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+(4, 4, '500.00', '2021-03-07 22:41:10'),
+(5, 4, '500.00', '2021-03-09 09:50:24');
 
 -- --------------------------------------------------------
 
@@ -221,7 +226,10 @@ CREATE TABLE `stavka` (
 INSERT INTO `stavka` (`narudzbina_id`, `proizvod_id`) VALUES
 (4, 1),
 (4, 2),
-(4, 1);
+(4, 1),
+(5, 1),
+(5, 2),
+(5, 1);
 
 -- --------------------------------------------------------
 
@@ -263,8 +271,13 @@ ALTER TABLE `kategorija`
 --
 ALTER TABLE `korisnik`
   ADD PRIMARY KEY (`ID`),
-  ADD KEY `uloga_id` (`uloga_id`),
-  ADD KEY `pol_id` (`pol_id`);
+  ADD KEY `uloga_id` (`uloga_id`);
+
+--
+-- Indexes for table `meni`
+--
+ALTER TABLE `meni`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `narudzbina`
@@ -272,12 +285,6 @@ ALTER TABLE `korisnik`
 ALTER TABLE `narudzbina`
   ADD PRIMARY KEY (`id`),
   ADD KEY `korisnik_id` (`korisnik_id`);
-
---
--- Indexes for table `pol`
---
-ALTER TABLE `pol`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `poruka`
@@ -340,19 +347,19 @@ ALTER TABLE `kategorija`
 -- AUTO_INCREMENT for table `korisnik`
 --
 ALTER TABLE `korisnik`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `meni`
+--
+ALTER TABLE `meni`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `narudzbina`
 --
 ALTER TABLE `narudzbina`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- AUTO_INCREMENT for table `pol`
---
-ALTER TABLE `pol`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `poruka`
@@ -386,8 +393,7 @@ ALTER TABLE `uloga`
 -- Constraints for table `korisnik`
 --
 ALTER TABLE `korisnik`
-  ADD CONSTRAINT `korisnik_ibfk_1` FOREIGN KEY (`uloga_id`) REFERENCES `uloga` (`ID`),
-  ADD CONSTRAINT `korisnik_ibfk_2` FOREIGN KEY (`pol_id`) REFERENCES `pol` (`id`);
+  ADD CONSTRAINT `korisnik_ibfk_1` FOREIGN KEY (`uloga_id`) REFERENCES `uloga` (`ID`);
 
 --
 -- Constraints for table `narudzbina`
