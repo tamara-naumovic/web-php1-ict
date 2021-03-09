@@ -131,7 +131,8 @@
                             </div>
                         </div>
                         <div class="about">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni optio debitis dignissimos sapiente atque, voluptatibus molestiae, natus nesciunt quasi laudantium accusantium autem? Magni beatae dolores voluptatem dolor perspiciatis earum ea!
+                            Student of final year at academy "Visoka ICT Skola". I am into programing and gaming. I like sports and music also.
+                            I want to become the CEO of company that tests and code games.
                         </div>
                     </div>
                     <div class="right_inner">
@@ -148,7 +149,7 @@
                                                 <p class="info_title">Front-End Developer</p>
                                                 <p class="info_com">Facebook</p>
                                                 <p class="info_cont">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptates ipsa earum praesentium veritatis laudantium dolores animi, minus optio nesciunt!
+                                                    
                                                 </p>
                                             </div>
                                         </div>
@@ -160,7 +161,7 @@
                                                 <p class="info_title">UI Developer</p>
                                                 <p class="info_com">Amazon</p>
                                                 <p class="info_cont">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptates ipsa earum praesentium veritatis laudantium dolores animi, minus optio nesciunt!
+
                                                 </p>
                                             </div>
                                         </div>
@@ -172,7 +173,7 @@
                                                 <p class="info_title">Database Menager</p>
                                                 <p class="info_com">Mona.doo</p>
                                                 <p class="info_cont">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptates ipsa earum praesentium veritatis laudantium dolores animi, minus optio nesciunt!
+                                                    
                                                 </p>
                                             </div>
                                         </div>
@@ -193,7 +194,7 @@
                                                 <p class="info_title">Web programing engeneer</p>
                                                 <p class="info_com">Visoka ICT Skola</p>
                                                 <p class="info_cont">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptates ipsa earum praesentium veritatis laudantium dolores animi, minus optio nesciunt!
+                                                    
                                                 </p>
                                             </div>
                                         </div>
@@ -205,7 +206,7 @@
                                                 <p class="info_title">Student</p>
                                                 <p class="info_com">Gimnazija Kraljevo</p>
                                                 <p class="info_cont">
-                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptates ipsa earum praesentium veritatis laudantium dolores animi, minus optio nesciunt!
+                                                    
                                                 </p>
                                             </div>
                                         </div>
