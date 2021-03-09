@@ -10,7 +10,7 @@ function printNavigation(data){
 
 $.ajax({
     url:"obradameni.php",
-    type:"post",
+    type:"get",
     success:function(data) {
         console.log("odgovor sa servera");
         console.log(data); 
