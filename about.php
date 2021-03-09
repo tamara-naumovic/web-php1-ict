@@ -134,6 +134,7 @@
                             Student of final year at academy "Visoka ICT Skola". I am into programing and gaming. I like sports and music also.
                             I want to become the CEO of company that tests and code games.
                         </div>
+                        <p><a href="dokumentacija.pdf">Dokumentacija</a></p>
                     </div>
                     <div class="right_inner">
                         <div class="exp">
