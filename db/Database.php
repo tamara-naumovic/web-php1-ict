@@ -2,9 +2,9 @@
 
 class Database
 {
-    private $hostname = "sql105.epizy.com";
-    private $username = "epiz_28108128";
-    private $password = "szMN5MxRDGl";
+    private $hostname = "localhost";
+    private $username = "root";
+    private $password = "";
     private $dbname;
     private $dblink;
     private $result;
@@ -59,7 +59,7 @@ class Database
         if($order!=null){
             $q.=' ORDER BY '.$order;
         }
-        //  echo $q;
+        // echo $q;
         $this->ExecuteQuery($q);
     }
     function insert($table="proizvod",$rows="naziv,kategorija_id, cena, proizvodjac, kvantitet, slika_id", $values){

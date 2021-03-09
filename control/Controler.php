@@ -8,7 +8,7 @@ class Controler{
     
     function __construct()
     {
-        $this->mydb = new Database("epiz_28108128_webshopprojekat");
+        $this->mydb = new Database("acabaza");
     }
 
     public static function getInstance()
@@ -114,8 +114,19 @@ class Controler{
 
     // meni
 
-    public function getMeni(){
-        $this->mydb->select("meni","*", null, null, null, null, null);
+    public function getMeniStandard(){
+        $where = ' naziv_linka IN ("Home", "About","Login","Store")';
+        $this->mydb->select("meni","*", null, null, null, $where, null);
+        return $this->mydb->getResult();
+    }
+    public function getMeniUser(){
+        $where = ' naziv_linka IN ("Home", "About","Contact","Store", "Logout","Korpa")';
+        $this->mydb->select("meni","*", null, null, null, $where, null);
+        return $this->mydb->getResult();
+    }
+    public function getMeniAdmin(){
+        $where = ' naziv_linka IN ("Admin", "Logout")';
+        $this->mydb->select("meni","*", null, null, null, $where , null);
         return $this->mydb->getResult();
     }
   

@@ -11,14 +11,6 @@ function ajaxCallBack(url, method, result){
     });
 }
 
-// nav ispis f-ja
-function printNavigation(data){
-    let html = '';
-    for(let linkElement of data){
-        html += `<li class="stavka"><a class="link" href="${linkElement.href}">${linkElement.textLink}</a></li>`;
-    }
-    $("#nav").html(html);
-}
 
 // kategorije f-ja proba - USPELO
 function printCat(data){
@@ -34,14 +26,6 @@ function printCat(data){
 
 window.onload = function(){
 
-    // NAV ISPIS 
-
-    // provera gde se nalazimo
-
-    // podaci navigation.json
-    ajaxCallBack(BASEURL + "navigation.json", "get", function(result){
-        printNavigation(result);
-    });
 
     ajaxCallBack(BASEURL + "categoriestest.json", "get", function(result){
         printCat(result);

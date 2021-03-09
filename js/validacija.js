@@ -11,7 +11,7 @@ const password = document.getElementById("password");
 const password2 = document.getElementById("confpassword");
 
 formLog.addEventListener("submit",(e)=>{
-    e.preventDefault();
+    // e.preventDefault();
     proveraLog();
 });
 
