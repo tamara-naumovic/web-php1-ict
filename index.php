@@ -31,18 +31,7 @@ session_start();
                 <div class="small-container">
                 <h2>Categories</h2>
                     <div class="row" id="kategorije">
-                        <!--<div class="col-3">
-                            <a href="store.php"><img src="images/mouse_kat.jpg" alt="mis"/></a>
-                        </div>
-                        <div class="col-3">
-                            <a href="store.php"><img src="images/keyboard_kat.jpg" alt="tastatura"/></a>
-                        </div>
-                        <div class="col-3">
-                            <a href="store.php"><img src="images/headphones_kat.jpg" alt="slusalice"/></a>
-                        </div>
-                        <div class="col-3">
-                            <a href="store.php"><img src="images/monitor_kat.jpg" alt="monitor"/></a>
-                        </div>-->
+                        
                     </div>
                 </div>
             </div>
