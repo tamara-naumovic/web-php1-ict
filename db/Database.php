@@ -46,6 +46,8 @@ class Database
         return $this->result;
     }
 
+    // SELECT
+
     function select($table="proizvod",$rows="*",$join_table="kategorija",$join_key1="kategorija_id",$join_key2="id", $where =null, $order=null){
         $q = 'SELECT '.$rows.' FROM '.$table;
         //SELECT * FROM novosti
@@ -62,6 +64,9 @@ class Database
         // echo $q;
         $this->ExecuteQuery($q);
     }
+
+    // INSERT
+
     function insert($table="proizvod",$rows="naziv,kategorija_id, cena, proizvodjac, kvantitet, slika_id", $values){
         $query_values = implode(',',$values);
         $q ='INSERT INTO '.$table;
@@ -76,6 +81,9 @@ class Database
             return false;
         }
     }
+
+    // UPDATE
+
     function update($table, $id,$id_val, $keys,$values){
         $query_values ="";
         $set_query = array();
@@ -91,6 +99,9 @@ class Database
             return false;
         }
     }
+
+    //DELETE
+
 
     function delete($table, $id, $id_value){
         $q = "DELETE FROM $table WHERE $table.$id=$id_value";
