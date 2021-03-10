@@ -19,7 +19,7 @@
                 <div class="title">
                     Contact
                 </div>
-                <form action="" id="formCnt" class="form">
+                <form action="" id="formCnt" class="form" method="post">
                     <div class="form-control">
                         <label>Message</label>
                         <textarea name="message" id="textareaCnt" placeholder="Message"></textarea>
