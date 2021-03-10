@@ -8,7 +8,7 @@ class Controler{
     
     function __construct()
     {
-        $this->mydb = new Database("acabaza");
+        $this->mydb = new Database("acabaaz2");
     }
 
     public static function getInstance()
@@ -22,7 +22,7 @@ class Controler{
     }
     // proizvodi
     public function getProizvod(){
-        $this->mydb->select();
+        $this->mydb->select("proizvod","*",null,null,null,null,null);
         return $this->mydb->getResult();
     }
     public function getProizvodFiler($filter){
@@ -68,6 +68,12 @@ class Controler{
     {
         $this->mydb->update("akcija","id",$id, $keys,$values);
         
+        return $this->mydb->getResult();
+
+    }
+
+    public function deleteAkcija($id){
+        $this->mydb->delete("akcija", "id",$id);
         return $this->mydb->getResult();
 
     }
@@ -140,9 +146,14 @@ class Controler{
         return $this->mydb->getResult();
     }
 
+    public function getPoslednjaSlikaID(){
+        $this->mydb->select("slika","id", null, null, null, null, " id DESC LIMIT 1");
+        return $this->mydb->getResult();
+
+    }
+
     public function insertSlika($values){
-        $values[]=2;
-        $this->mydb->insert("korisnik","url,naziv",$values);
+        $this->mydb->insert("slika","url,naziv",$values);
         return $this->mydb->getResult();
 
     }
