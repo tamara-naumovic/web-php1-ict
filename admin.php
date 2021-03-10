@@ -47,6 +47,9 @@ $ctrl = Controler::getInstance();
                         <div class="form-control fp">
                             <label>Naziv</label>
                             <input type="text" name="nazivProd" id="nazivProd" />
+                            <i class="fas fa-check"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small class="small">Error message</small>
                         </div>
                         <div class="form-control fp">
                             <label>Kategorija</label>
@@ -66,14 +69,23 @@ $ctrl = Controler::getInstance();
                         <div class="form-control fp">
                             <label>Cena</label>
                             <input type="text" name="cenaProd" id="cenaProd" />
+                            <i class="fas fa-check"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small class="small">Error message</small>
                         </div>
                         <div class="form-control fp">
                             <label>Proizvodjac</label>
                             <input type="text" name="proizvodjacProd" id="proizvodjacProd" />
+                            <i class="fas fa-check"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small class="small">Error message</small>
                         </div>
                         <div class="form-control fp">
                             <label>kvantitet</label>
                             <input type="text" name="kvantitetProd" id="kvantitetProd" />
+                            <i class="fas fa-check"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small class="small">Error message</small>
                         </div>
                         <div class="form-control fp">
                             <label>Slika</label>
@@ -196,6 +208,7 @@ $ctrl = Controler::getInstance();
         </div>
         <div class="cistac"></div>
         <?php include("footer.php"); ?>
+        <script type="text/javascript" src="js/proba.js"></script>
         <script type="text/javascript" src="js/meni.js"></script>
 
     </div>
