@@ -37,7 +37,7 @@
                         <h1>NAZIV PROIZVODA</h1>
                         <p>KATEGORIJA</p>
                         <h4>CENA</h4>
-                        <input type="button" name="" id="btnAdd" value="Add to Cart"/>
+                        <input type="button" name="btnAdd" id="btnAdd" value="Add to Cart"/>
                         <h3>OPIS PROIZVODA</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A optio qui eveniet officia animi harum cupiditate ipsum ducimus sit, molestias assumenda illum. Quaerat dolore suscipit, optio deserunt nobis earum explicabo!</p>
                     </div>
