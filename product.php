@@ -1,3 +1,23 @@
+<?php
+session_start();
+if (isset($_SESSION['loggeduser']) && $_SESSION['loggeduser'][1] == "1") {
+    header('Location: admin.php');
+    exit();
+}
+include("control/Controler.php");
+$ctrl = Controler::getInstance();
+$proizvod = [];
+$kategorija = [];
+$slika = [];
+if(!isset($_GET['id'])){
+    header('Location: store.php');
+}else{
+    $proizvod = $ctrl->getProizvodFiler(" id=".$_GET['id'])->fetch_object();
+    $kategorija =  $ctrl->getKategorijaSingle($proizvod->kategorija_id)->fetch_object();
+    $slika =  $ctrl->getSlikaSingle($proizvod->slika_id)->fetch_object();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,93 +37,23 @@
             <div class="small-container single-product">
                 <div class="row-gore">
                     <div class="col-2 main">
-                        <img src="images/logo.jpg" alt="" id="productImg"/>
-                        <div class="small-img-row">
-                            <div class="small-img-col alt">
-                                <img src="images/razer1.jpg" alt="" class="small-img"/>
-                            </div>
-                            <div class="small-img-col">
-                                <img src="images/razer2.jpg" alt="" class="small-img"/>
-                            </div>
-                            <div class="small-img-col">
-                                <img src="images/razer3.jpg" alt="" class="small-img"/>
-                            </div>
-                            <div class="small-img-col">
-                                <img src="images/razer1.jpg" alt="" class="small-img"/>
-                            </div>
-                        </div>
+                        <img src="<?php echo $slika->url?>" alt="" id="<?php echo $slika->naziv?>"/>
+                        
                     </div>
                     <div class="col-2 right">
-                        <h1>NAZIV PROIZVODA</h1>
-                        <p>KATEGORIJA</p>
-                        <h4>CENA</h4>
+                        <h1><?php echo $proizvod->naziv?></h1>
+                        <p><?php echo $kategorija->naziv?></p>
+                        <h4><?php echo $proizvod->cena?></h4>
                         <input type="button" name="btnAdd" id="btnAdd" value="Add to Cart"/>
-                        <h3>OPIS PROIZVODA</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A optio qui eveniet officia animi harum cupiditate ipsum ducimus sit, molestias assumenda illum. Quaerat dolore suscipit, optio deserunt nobis earum explicabo!</p>
+                        <h3>Kvantitet</h3>
+                        <p><?php echo $proizvod->kvantitet?></p>
+                        <h3>Proizvodjac</h3>
+                        <p><?php echo $proizvod->proizvodjac?></p>
                     </div>
                 </div>
             </div>
 
-            <div class="small-container">
-                <div class="row row-2">
-                    <h2>Related Products</h2>
-                </div>
-                <a href="#" class="viewmore">View More</a>
-                <div class="row">
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                        <h4>Naziv proizvoda</h4>
-                        <div class="raiting">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star-half"></i>
-                        </div>
-                        <p>Cena</p>
-                        <a href="#">Dodaj u korpu</a>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                        <h4>Naziv proizvoda</h4>
-                        <div class="raiting">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star-half"></i>
-                        </div>
-                        <p>Cena</p>
-                        <a href="#">Dodaj u korpu</a>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                        <h4>Naziv proizvoda</h4>
-                        <div class="raiting">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>Cena</p>
-                        <a href="#">Dodaj u korpu</a>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                        <h4>Naziv proizvoda</h4>
-                        <div class="raiting">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                        <p>Cena</p>
-                        <a href="#">Dodaj u korpu</a>
-                    </div>
-                </div>
-            </div>
+            
         </div>
 
         <?php include("footer.php"); ?>
