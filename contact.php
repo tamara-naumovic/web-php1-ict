@@ -46,6 +46,8 @@ if (isset($_SESSION['loggeduser']) && $_SESSION['loggeduser'][1] == "1") {
 
         <script type="text/javascript" src="js/validacijaCnt.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/meni.js"></script>
+
     </div>
 </body>
 </html>
