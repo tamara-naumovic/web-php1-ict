@@ -12,7 +12,7 @@ if (isset($_POST['emailLog']) && isset($_POST['passwordLog'])) {
     $password = $_POST['passwordLog'];
     $korisnik = $ctrl->getKorisnik($email, $password);
     $row= $korisnik->fetch_object();
-    $_SESSION['loggeduser'] = [$row->ime,$row->uloga_id];
+    $_SESSION['loggeduser'] = [$row->ime,$row->uloga_id,$row->ID];
     header('Location: index.php');
     exit();
 }
