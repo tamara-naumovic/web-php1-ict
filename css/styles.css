@@ -223,7 +223,7 @@ ul.menu{
     flex-basis: 20%;
     padding: 10px;
     min-width: 200px;
-    margin-bottom: 50px;
+    margin: 5px 5px 50px 5px;
     transition: transform 0.5s;
 }
 .col-4 img{
