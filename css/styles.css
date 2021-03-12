@@ -281,6 +281,8 @@ h4{
 }
 
 .col-left{
+    
+    align-self: start;
     max-width: 300px;
     width: 100%;
     border-right: 1px solid black;
