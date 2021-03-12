@@ -8,7 +8,7 @@ class Controler{
     
     function __construct()
     {
-        $this->mydb = new Database("acabaaz2");
+        $this->mydb = new Database("acabaza");
     }
 
     public static function getInstance()

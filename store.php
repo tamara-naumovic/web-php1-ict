@@ -81,7 +81,7 @@ if (!isset($_GET['kat'])) {
                             $slika = $ctrl->getSlikaSingle($row->slika_id)->fetch_object();
 
                         ?>
-                            <div class="col-4">
+                            <div class="col-4 img">
                                 <img src="<?php echo $slika->url ?>" alt="<?php echo $slika->naziv ?>" />
                                 <a href="product.php?id=<?php echo $row->ID; ?>">
                                     <h4><?php echo $row->naziv; ?></h4>
@@ -96,7 +96,7 @@ if (!isset($_GET['kat'])) {
                                 <p><?php echo $row->cena; ?></p>
                                 <form action="dodajUkorpu.php" method="post">
                                     <input type="hidden" name="proizvodKorpaId" value="<?php echo $row->ID;?>">
-                                    <input type="submit" name="submitKorpa" value="Dodaj u korpu">
+                                    <input type="submit" name="submitKorpa" value="Dodaj u korpu" class="btnDodaj">
                                 </form>
                             </div>
                         <?php endwhile; ?>

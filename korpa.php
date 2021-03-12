@@ -25,6 +25,10 @@ if(isset($_SESSION['korpa'])):
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="https://kit.fontawesome.com/d8531d1ca7.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <title>Korpa</title>
     <style>
         td img{
@@ -33,7 +37,7 @@ if(isset($_SESSION['korpa'])):
     </style>
 </head>
 <body>
-
+<? include("header.php"); ?>
     <table>
         <thead>
             <tr>
@@ -67,6 +71,9 @@ if(isset($_SESSION['korpa'])):
     <form action="naruci.php" method="post">
         <input type="submit" name="naruciKorma" value="Naruči">
     </form>
+    <div class="cistac"></div>
+    <? include("footer.php"); ?>
+    <script src="meni.js" type="text/javascript"></script>
 </body>
 </html>
 <?php else:?>
@@ -76,10 +83,18 @@ if(isset($_SESSION['korpa'])):
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css" type="text/css">
+        <script src="https://kit.fontawesome.com/d8531d1ca7.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
         <title>Korpa</title>
     </head>
     <body>
+        <? include("header.php"); ?>
         <p>Nema proizvoda u korpi</p>
+        <div class="cistac"></div>
+        <? include("footer.php"); ?>
+        <script type="text/javascript" src="js/meni.js"></script>
     </body>
     </html>
 <?php endif;?>

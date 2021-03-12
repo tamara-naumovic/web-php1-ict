@@ -359,6 +359,19 @@ h4{
     height: auto;
 }
 
+.col-4.img img{
+    width: 250px;
+    height: 200px;
+}
+
+.btnDodaj {
+    width: 130px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
 /*PRODUCT PAGE*/
 
 #product-okvir{
@@ -390,8 +403,8 @@ h4{
     padding: 30px 0;
 }
 .col-2.main img{
-    width: 100%;
-    height: 100%;
+    width: 850px;
+    height: 650px;
 }
 
 .small-container .col-2 img{
