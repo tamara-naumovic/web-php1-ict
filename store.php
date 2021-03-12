@@ -9,10 +9,10 @@ include("control/Controler.php");
 $ctrl = Controler::getInstance();
 $proizvodi = [];
 $kategorije = $ctrl->getKategorija();
-if(!isset($_GET['kat'])){
+if (!isset($_GET['kat'])) {
     $proizvodi = $ctrl->getProizvod();
-}else{
-    $proizvodi = $ctrl->getProizvodFiler("kategorija_id=".$_GET['kat']);
+} else {
+    $proizvodi = $ctrl->getProizvodFiler("kategorija_id=" . $_GET['kat']);
 }
 ?>
 <!DOCTYPE html>
@@ -68,7 +68,7 @@ if(!isset($_GET['kat'])){
                         <div class="chb"><input type="checkbox" name="" id="" /><span>Sort by name</span></div>
                         <div class="chb"><input type="checkbox" name="" id="" /><span>Sort by quantity</span></div>
                     </div>
-                    <h2><a href="store.php?" id="clear-sort">Clear</a></h2> 
+                    <h2><a href="store.php?" id="clear-sort">Clear</a></h2>
 
                 </div>
             </div>
@@ -83,7 +83,9 @@ if(!isset($_GET['kat'])){
                         ?>
                             <div class="col-4">
                                 <img src="<?php echo $slika->url ?>" alt="<?php echo $slika->naziv ?>" />
-                                <a href="product.php?id=<?php echo $row->ID;?>"><h4><?php echo $row->naziv; ?></h4></a>
+                                <a href="product.php?id=<?php echo $row->ID; ?>">
+                                    <h4><?php echo $row->naziv; ?></h4>
+                                </a>
                                 <div class="raiting">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -92,7 +94,10 @@ if(!isset($_GET['kat'])){
                                     <i class="far fa-star-half"></i>
                                 </div>
                                 <p><?php echo $row->cena; ?></p>
-                                <a href="#">Dodaj u korpu</a>
+                                <form action="dodajUkorpu.php" method="post">
+                                    <input type="hidden" name="proizvodKorpaId" value="<?php echo $row->ID;?>">
+                                    <input type="submit" name="submitKorpa" value="Dodaj u korpu">
+                                </form>
                             </div>
                         <?php endwhile; ?>
                     </div>
