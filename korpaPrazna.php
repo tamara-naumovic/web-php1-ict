@@ -7,8 +7,6 @@ if (isset($_SESSION['loggeduser']) && $_SESSION['loggeduser'][1] == "1") {
     header('Location: index.php');
     exit();
 }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +20,6 @@ if (isset($_SESSION['loggeduser']) && $_SESSION['loggeduser'][1] == "1") {
     <script src="https://kit.fontawesome.com/d8531d1ca7.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
-
         #table-okvir {
             display: flex;
             flex-direction: column;
@@ -44,11 +41,8 @@ if (isset($_SESSION['loggeduser']) && $_SESSION['loggeduser'][1] == "1") {
         <div id="table-okvir">
             <p>Korpa je prazna</p>
             <a href="store.php">Vrati se nazad u prodavnicu</a>
-
         </div>
-
         <div class="cistac"></div>
-
         <?php include("footer.php"); ?>
     </div>
 
