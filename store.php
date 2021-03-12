@@ -7,9 +7,13 @@ if (isset($_SESSION['loggeduser']) && $_SESSION['loggeduser'][1] == "1") {
 
 include("control/Controler.php");
 $ctrl = Controler::getInstance();
-$proizvodi = $ctrl->getProizvod();
+$proizvodi = [];
 $kategorije = $ctrl->getKategorija();
-
+if(!isset($_GET['kat'])){
+    $proizvodi = $ctrl->getProizvod();
+}else{
+    $proizvodi = $ctrl->getProizvodFiler("kategorija_id=".$_GET['kat']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,7 +43,7 @@ $kategorije = $ctrl->getKategorija();
                         ?>
                             <div class="kat kat_1">
                                 <h3>
-                                    <a href="#store">
+                                    <a href="store.php?kat=<?php echo $row->ID; ?>">
                                         <?php echo $row->naziv; ?>
                                     </a>
                                 </h3>
