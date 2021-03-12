@@ -44,14 +44,14 @@ if (!isset($_GET['id'])) {
                     </div>
                     <div class="col-2 right">
                         <h1><?php echo $proizvod->naziv ?></h1>
-                        <p><?php echo $kategorija->naziv ?></p>
-                        <h4><?php echo $proizvod->cena ?></h4>
+                        <p>Kategorija: <?php echo $kategorija->naziv ?></p>
+                        <h4>Cena: <?php echo $proizvod->cena ?></h4>
                         <form action="dodajUkorpu.php" method="post">
                             <input type="hidden" name="proizvodKorpaId" value="<?php echo $proizvod->ID; ?>">
-                            <input type="submit" name="submitKorpa" value="Dodaj u korpu">
-                        </form>
+                            <input type="submit" name="submitKorpa" value="Dodaj u korpu" class="btnDodaj">
+                        </form></br>
                         <h3>Kvantitet</h3>
-                        <p><?php echo $proizvod->kvantitet ?></p>
+                        <p><?php echo $proizvod->kvantitet ?></p></br>
                         <h3>Proizvodjac</h3>
                         <p><?php echo $proizvod->proizvodjac ?></p>
                     </div>

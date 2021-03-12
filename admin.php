@@ -208,9 +208,8 @@ $ctrl = Controler::getInstance();
         </div>
         <div class="cistac"></div>
         <?php include("footer.php"); ?>
-        <script type="text/javascript" src="js/proba.js"></script>
-        <script type="text/javascript" src="js/meni.js"></script>
-
     </div>
+    <script type="text/javascript" src="js/proba.js"></script>
+    <script type="text/javascript" src="js/meni.js"></script>
 </body>
 </html>

@@ -106,10 +106,9 @@ if (!isset($_GET['kat'])) {
         </div>
         <div class="cistac"></div>
         <?php include("footer.php"); ?>
-
-        <script type="text/javascript" src="js/meni.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
     </div>
+    <script type="text/javascript" src="js/meni.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

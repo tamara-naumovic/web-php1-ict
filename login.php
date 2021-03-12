@@ -115,11 +115,9 @@ if (isset($_POST['emailLog']) && isset($_POST['passwordLog'])) {
         </div>
         <div class="cistac"></div>
         <?php include("footer.php"); ?>
-
-        <script type="text/javascript" src="js/validacija.js"></script>
-        <script type="text/javascript" src="js/meni.js"></script>
-
     </div>
+    <script type="text/javascript" src="js/validacija.js"></script>
+    <script type="text/javascript" src="js/meni.js"></script>
 </body>
 
 </html>

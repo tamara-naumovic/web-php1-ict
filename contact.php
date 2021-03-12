@@ -43,11 +43,9 @@ if (isset($_SESSION['loggeduser']) && $_SESSION['loggeduser'][1] == "1") {
         </div>
         <div class="cistac"></div>
         <?php include("footer.php"); ?>
-
-        <script type="text/javascript" src="js/validacijaCnt.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/meni.js"></script>
-
     </div>
+    <script type="text/javascript" src="js/validacijaCnt.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/meni.js"></script>
 </body>
 </html>

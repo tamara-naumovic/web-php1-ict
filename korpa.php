@@ -37,43 +37,45 @@ if(isset($_SESSION['korpa'])):
     </style>
 </head>
 <body>
-<? include("header.php"); ?>
-    <table>
-        <thead>
-            <tr>
-                <th></th>
-                <th>Naziv</th>
-                <th>Cena</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php 
-                foreach ($proizvodi as $p): 
-                    $slika = $ctrl->getSlikaSingle($p->slika_id)->fetch_object();
-                    $suma+=$p->cena
-            ?>
-            <tr>
-                
-                <td><img src="<?php echo $slika->url;?>" alt="<?php echo $slika->naziv;?>"></td>
-                <td><?php echo $p->naziv;?></td>
-                <td><?php echo $p->cena;?></td>
-            </tr>
-            <?php endforeach;?>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="2"> Ukupno</td>
-                <td > <?php echo $suma;?></td>
-            </tr>
-        </tfoot>
-    </table>
-    <?php $_SESSION['korpa-ukupno'] =$suma ;?>
-    <form action="naruci.php" method="post">
-        <input type="submit" name="naruciKorma" value="Naruči">
-    </form>
-    <div class="cistac"></div>
-    <? include("footer.php"); ?>
-    <script src="meni.js" type="text/javascript"></script>
+    <div class="okvir">
+        <? include("header.php"); ?>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Naziv</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php 
+                    foreach ($proizvodi as $p): 
+                        $slika = $ctrl->getSlikaSingle($p->slika_id)->fetch_object();
+                        $suma+=$p->cena
+                ?>
+                <tr>
+                    
+                    <td><img src="<?php echo $slika->url;?>" alt="<?php echo $slika->naziv;?>"></td>
+                    <td><?php echo $p->naziv;?></td>
+                    <td><?php echo $p->cena;?></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"> Ukupno</td>
+                    <td > <?php echo $suma;?></td>
+                </tr>
+            </tfoot>
+        </table>
+        <?php $_SESSION['korpa-ukupno'] =$suma ;?>
+        <form action="naruci.php" method="post">
+            <input type="submit" name="naruciKorma" value="Naruči">
+        </form>
+        <div class="cistac"></div>
+        <? include("footer.php"); ?>
+    </div>
+    <script src="js/meni.js" type="text/javascript"></script>
 </body>
 </html>
 <?php else:?>
@@ -90,10 +92,12 @@ if(isset($_SESSION['korpa'])):
         <title>Korpa</title>
     </head>
     <body>
-        <? include("header.php"); ?>
-        <p>Nema proizvoda u korpi</p>
-        <div class="cistac"></div>
-        <? include("footer.php"); ?>
+        <div class="okvir">
+            <? include("header.php"); ?>
+            <p>Nema proizvoda u korpi</p>
+            <div class="cistac"></div>
+            <? include("footer.php"); ?>
+        </div>
         <script type="text/javascript" src="js/meni.js"></script>
     </body>
     </html>
