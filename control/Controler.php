@@ -8,7 +8,7 @@ class Controler{
     
     function __construct()
     {
-        $this->mydb = new Database("acabaza");
+        $this->mydb = new Database("acabaaz2");
     }
 
     public static function getInstance()
@@ -97,6 +97,11 @@ class Controler{
         $this->mydb->select("kategorija","*", null, null, null, null, null);
         return $this->mydb->getResult();
     }
+    public function getKategorijaSingle($id){
+        $where = " id=".$id;
+        $this->mydb->select("kategorija","*", null, null, null, $where, null);
+        return $this->mydb->getResult();
+    }
     // public function getPoslednjaKategorija(){
     //     $this->mydb->select("kategorija","*", null, null, null, null, " id DESC LIMIT 1");
     //     return $this->mydb->getResult();
@@ -141,8 +146,13 @@ class Controler{
 
      // slika
 
-     public function getSlika(){
+    public function getSlika(){
         $this->mydb->select("slika","*", null, null, null, null, null);
+        return $this->mydb->getResult();
+    }
+    public function getSlikaSingle($id){
+        $where = "id = ".$id;
+        $this->mydb->select("slika","*", null, null, null, $where, null);
         return $this->mydb->getResult();
     }
 
