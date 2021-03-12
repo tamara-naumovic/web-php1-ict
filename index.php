@@ -4,6 +4,13 @@ if (isset($_SESSION['loggeduser']) && $_SESSION['loggeduser'][1] == "1") {
     header('Location: admin.php');
     exit();
 }
+include("control/Controler.php");
+$ctrl = Controler::getInstance();
+$proizvodi = $ctrl->getProizvod();
+$proizvodi2 = $ctrl->getProizvod();
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +20,10 @@ if (isset($_SESSION['loggeduser']) && $_SESSION['loggeduser'][1] == "1") {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamingStore</title>
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
     <script src="https://kit.fontawesome.com/d8531d1ca7.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+
 </head>
 
 <body>
@@ -43,25 +51,40 @@ if (isset($_SESSION['loggeduser']) && $_SESSION['loggeduser'][1] == "1") {
             <div class="small-container">
                 <h2>Featured Products</h2>
                 <div class="row">
+                <?php
+                    $nizFeatured = array();
+                    while($row=$proizvodi->fetch_object()):
+                        $nizFeatured[]=$row;
+                    endwhile;
+                    $nizFeaturedIndex = array_rand($nizFeatured, 4);
+                    
+                    foreach ($nizFeaturedIndex as $nfindex):
+                        $featiredProizvod = $nizFeatured[$nfindex];
+                        $slika = $ctrl->getSlikaSingle($featiredProizvod->slika_id)->fetch_object();
+
+                ?>
                     <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
+                        <a href="store.php"> <img src="<?php echo $slika->url ?>" alt="<?php echo $slika->naziv ?>"/></a>
                     </div>
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                    </div>
+                <?php endforeach;?>
                 </div>
 
                 <h2>Latest Products</h2>
                 <div class="row">
+                <?php
+                    $nizLatest = array();
+                    while($row=$proizvodi2->fetch_object()):
+                        $nizLatest[]=$row;
+                    endwhile;
+                    $nizLatestIndex = array_rand($nizLatest, 8);
+                    
+                    foreach ($nizLatestIndex as $nlindex):
+                        $latestProizvod = $nizLatest[$nlindex];
+                        $slika = $ctrl->getSlikaSingle($latestProizvod->slika_id)->fetch_object();   
+                ?>
                     <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                        <h4>Naziv proizvoda</h4>
+                        <img src="<?php echo $slika->url ?>" alt="<?php echo $slika->naziv ?>"/>
+                        <h4><?php echo $latestProizvod->naziv;?></h4>
                         <div class="raiting">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -69,103 +92,12 @@ if (isset($_SESSION['loggeduser']) && $_SESSION['loggeduser'][1] == "1") {
                             <i class="fas fa-star"></i>
                             <i class="far fa-star-half"></i>
                         </div>
-                        <p>Cena</p>
+                        <p><?php echo $latestProizvod->cena;?></p>
                         <a href="#">Dodaj u korpu</a>
                     </div>
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                        <h4>Naziv proizvoda</h4>
-                        <div class="raiting">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star-half"></i>
-                        </div>
-                        <p>Cena</p>
-                        <a href="#">Dodaj u korpu</a>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                        <h4>Naziv proizvoda</h4>
-                        <div class="raiting">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>Cena</p>
-                        <a href="#">Dodaj u korpu</a>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                        <h4>Naziv proizvoda</h4>
-                        <div class="raiting">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                        <p>Cena</p>
-                        <a href="#">Dodaj u korpu</a>
-                    </div>
+                <?php endforeach;?>
                 </div>
-                <div class="row">
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                        <h4>Naziv proizvoda</h4>
-                        <div class="raiting">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star-half"></i>
-                        </div>
-                        <p>Cena</p>
-                        <a href="#">Dodaj u korpu</a>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                        <h4>Naziv proizvoda</h4>
-                        <div class="raiting">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star-half"></i>
-                        </div>
-                        <p>Cena</p>
-                        <a href="#">Dodaj u korpu</a>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                        <h4>Naziv proizvoda</h4>
-                        <div class="raiting">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>Cena</p>
-                        <a href="#">Dodaj u korpu</a>
-                    </div>
-                    <div class="col-4">
-                        <img src="images/logo.jpg" alt="logo"/>
-                        <h4>Naziv proizvoda</h4>
-                        <div class="raiting">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                        <p>Cena</p>
-                        <a href="#">Dodaj u korpu</a>
-                    </div>
-                </div>
+
             </div>
 
         </div>
