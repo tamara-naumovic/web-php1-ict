@@ -116,6 +116,11 @@ class Controler{
         return $this->mydb->getResult();
 
     }
+    public function getUlogovanKorisnik($id){
+        $this->mydb->select("korisnik","*", null, null, null, " id=$id" , null);
+        return $this->mydb->getResult();
+
+    }
     public function insertKorisnik($values){
         $values[]=2;
         $this->mydb->insert("korisnik","ime,prezime, email, sifra, adresa, uloga_id",$values);
@@ -192,10 +197,10 @@ class Controler{
 
     // narudzbine
 
-    public function insertStavka($values){
+    public function insertStavka($id){
         $narudzbine = $this->getNaruzbina();
         $narudzbina_id = $narudzbine->fetch_object()->id;
-        $values[]=$narudzbina_id;
+        $values=[$id,$narudzbina_id ];
         $this->mydb->insert("stavka","proizvod_id,narudzbina_id",$values);
         return $this->mydb->getResult();
     }
@@ -209,6 +214,7 @@ class Controler{
 
     public function insertNaruzbina($values,$stavke){
         $values[]="NOW()";
+        print_r($values);
         $this->mydb->insert("narudzbina","korisnik_id, ukupna_cena, datum",$values);
         
         foreach ($stavke as $stavka) {
