@@ -68,6 +68,8 @@ if(!isset($_GET['kat'])){
                         <div class="chb"><input type="checkbox" name="" id="" /><span>Sort by name</span></div>
                         <div class="chb"><input type="checkbox" name="" id="" /><span>Sort by quantity</span></div>
                     </div>
+                    <h2><a href="store.php?" id="clear-sort">Clear</a></h2> 
+
                 </div>
             </div>
             <div class="col col-right">

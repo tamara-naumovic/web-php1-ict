@@ -310,6 +310,11 @@ h4{
     left: 50%;
     transform: translateX(-50%);
 }
+#clear-sort, #clear-sort:visited{
+    text-decoration: none;
+    color: #505978;
+
+}
 
 .kategorije{
     margin-top: 20px;
