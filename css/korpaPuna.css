@@ -1,0 +1,55 @@
+#celijaSlika,
+#celijaSlika img {
+    width: 300px;
+}
+
+#korpaProizvodi {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+#table-okvir {
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+#korpaProizvodi td,
+#korpaProizvodi th {
+    /* border: 1px solid #ddd; */
+    padding: 8px;
+}
+
+#korpaProizvodi tbody tr:hover {
+    background-color: #ddd;
+}
+
+#korpaProizvodi th, #korpaProizvodi tfoot tr:first-child {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+    font-size: 150%;
+}
+
+
+#korpaDugme {
+
+    background-color: black;
+    font-size: 150%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+#korpaUkupno{
+    text-align: end;
+}
